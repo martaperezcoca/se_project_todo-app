@@ -5,9 +5,15 @@ class Section {
     this._container = document.querySelector(containerSelector);
   }
 
-  renderItems() {}
+  renderItems() {
+    this._items.forEach((item) => {
+      this._renderer(item);
+    });
+  }
 
-  addItem() {}
+  addItem(element) {
+    this._container.append(element);
+  }
 }
 
 export default Section;
